@@ -42,6 +42,10 @@
     /* max-height: max-content; */
 }
 
+.box p  {
+  color: gray;
+}
+
 /* .img {
   width: 20px;
   height: 20px;
