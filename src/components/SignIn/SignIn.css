@@ -1,0 +1,48 @@
+.signin_main {
+  max-width: 90%;
+  margin: auto;
+  background-color: #fff;
+  min-height: 80vh;
+  width: 50%;
+  border-radius: 10px;
+  padding: 20px;
+  display: inline;
+  text-align: center;
+  align-items: center;
+}
+
+.sign-in-btn {
+  max-width: 400px;
+  margin-top: 60px;
+  padding: 0 30px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  line-height: 47px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px  rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.sign-in-btn:hover {
+  transform: scale(1.1);
+  background-color: #3b5bfe;
+}
+.box {
+    /* flex-grow: 6; */
+    background-color: #f4f3f8;
+    border-radius: 10px;
+    padding: 20px 30px;
+    padding-top: 80px;
+    padding-bottom: 90px;
+    display: block;
+    /* align-items: center; */
+    margin-top: 5rem;
+    /* max-height: max-content; */
+}
+
+/* .img {
+  width: 20px;
+  height: 20px;
+} */
