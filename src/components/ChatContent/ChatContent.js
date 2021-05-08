@@ -23,7 +23,7 @@ const ChatContent = () => {
   const sendMessage = async (e) => {
     e.preventDefault();
 
-    const { uid, photoURL } = auth.currentUser;
+    const { uid, photoURL, createdAt } = auth.currentUser;
     
     await messagesRef.add({
       text: formValue,
@@ -43,7 +43,7 @@ const ChatContent = () => {
              <div className="current-chatting-user">
               <Avatar
                 isOnline="active"
-                image={photoURL}
+                photoURL={photoURL}
               />
               <p>{displayName}</p>
             </div> 
@@ -61,11 +61,15 @@ const ChatContent = () => {
           <div className="chat__items">
           <main>
 
-{messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
+          {messages && messages.map(msg => <ChatMessage 
+          // animationDelay={index + 2}
+          key={msg.id} 
+          message={msg}
+           />)}
 
-<span ref={dummy}></span>
+          <span ref={dummy}></span>
 
-</main>
+          </main>
           </div>
         </div>
         <div className="content__footer">
@@ -73,7 +77,6 @@ const ChatContent = () => {
             <button className="addFiles">
               <i className="fa fa-plus"></i>
             </button>
-          
 
               <input 
               type='text'

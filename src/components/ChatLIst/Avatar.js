@@ -1,10 +1,8 @@
 import React from 'react';
 import { auth } from './../../firebase/config';
 
-const Avatar = ({isOnline}) => {
+const Avatar = ({photoURL}) => {
 
-
-    const { uid, photoURL } = auth.currentUser;
 
     return (
         <div className="avatar">
