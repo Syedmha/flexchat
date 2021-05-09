@@ -10,9 +10,9 @@ import moment from 'moment';
 function ChatMessage(props) {
     const { text, uid, photoURL, createdAt} = props.message;
    
-     const date = moment(createdAt.toDate()).format("Do MMM");
-     const time = moment(createdAt.toDate()).format('LT'); 
-    //const time = (createdAt.seconds * 1000).toLocaleDateString("en-US")
+     const date = createdAt && moment(createdAt.toDate()).format("Do MMM");
+     const time = createdAt && moment(createdAt.toDate()).format('LT'); 
+    //const time = createdAt && (createdAt.seconds * 1000).toLocaleDateString("en-US")
     const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
   
     return (<>

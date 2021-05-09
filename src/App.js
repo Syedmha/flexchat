@@ -12,7 +12,6 @@ function App( ) {
   const [user] = useAuthState(auth);
   
   
-  
   return (
     <div className="__main">
       <NavBar />

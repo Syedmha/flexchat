@@ -3,7 +3,6 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 
-
 firebase.initializeApp({
     apiKey: "AIzaSyB9EUUB705RZeV1luIZ7fs21yUdI5S4U74",
     authDomain: "flexchat-360b1.firebaseapp.com",
