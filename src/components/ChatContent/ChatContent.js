@@ -84,7 +84,7 @@ const ChatContent = () => {
               value={formValue} 
               onChange={(e) => setFormValue(e.target.value)} 
                />
-              <button type="submit" className="btnSendMsg" id="sendMsgBtn" onClick={sendMessage} >
+              <button type="submit" className="btnSendMsg" id="sendMsgBtn" onClick={sendMessage} disabled={!formValue}>
                {/* disabled={!formValue} */}
               <i className="fa fa-paper-plane"></i>
               </button>
