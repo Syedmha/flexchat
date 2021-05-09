@@ -23,7 +23,7 @@ const ChatContent = () => {
   const sendMessage = async (e) => {
     e.preventDefault();
 
-    const { uid, photoURL, createdAt } = auth.currentUser;
+    const { uid, photoURL } = auth.currentUser;
     
     await messagesRef.add({
       text: formValue,

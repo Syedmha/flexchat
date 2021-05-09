@@ -4,11 +4,15 @@ import firebase from './../../firebase/config';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import './../ChatMessage/ChatMessage.css';
 import Avatar from './../ChatLIst/Avatar';
+import moment from 'moment';
 
 
 function ChatMessage(props) {
-    const { text, uid, photoURL, createdAt } = props.message;
-  
+    const { text, uid, photoURL, createdAt} = props.message;
+   
+     const date = moment(createdAt.toDate()).format("Do MMM");
+     const time = moment(createdAt.toDate()).format('LT'); 
+    //const time = (createdAt.seconds * 1000).toLocaleDateString("en-US")
     const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
   
     return (<>
@@ -29,8 +33,9 @@ function ChatMessage(props) {
         <div className="chat__item__content">
           <div className="chat__msg">{text}</div>
           <div className="chat__meta">
-            <span></span>
-            <span></span>
+            {/* <span> {`${createdAt}`}</span> */}
+            <span>{date}</span>
+            <span>{time}</span>
           </div>
         </div>
         <Avatar isOnline="active" photoURL={photoURL} />
