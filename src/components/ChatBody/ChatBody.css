@@ -5,3 +5,18 @@
     padding: 15px 20px;
     display: flex;
   }
+
+
+  /* Media queries */
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 425px) {
+/* Styles */
+.__main {
+  
+  
+  /* height: 600px; */
+  
+}
+}
