@@ -5,12 +5,13 @@ import firebase from './../../firebase/config';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import ChatMessage from './../ChatMessage/ChatMessage';
 import Avatar from './../ChatLIst/Avatar';
+import UserProfile from '../UserProfile/UserProfile';
 
 const ChatContent = () => {
 
   const dummy = useRef();
   const messagesRef = firestore.collection('messages');
-  const query = messagesRef.orderBy('createdAt').limit(25);
+  const query = messagesRef.orderBy('createdAt');
 
   const [messages] = useCollectionData(query, { idField: 'id' });
 
@@ -34,6 +35,7 @@ const ChatContent = () => {
     setFormValue('');
     dummy.current.scrollIntoView({ behavior: 'smooth' });
   }
+
 
     return(
         <div className="main__chatcontent">
@@ -61,7 +63,7 @@ const ChatContent = () => {
           <div className="chat__items">
           <main>
 
-          {messages && messages.map(msg => <ChatMessage 
+          {messages && messages.map( (msg) => <ChatMessage 
           // animationDelay={index + 2}
           key={msg.id} 
           message={msg}
@@ -84,7 +86,7 @@ const ChatContent = () => {
               value={formValue} 
               onChange={(e) => setFormValue(e.target.value)} 
                />
-              <button type="submit" className="btnSendMsg" id="sendMsgBtn" onClick={sendMessage} disabled={!formValue}>
+              <button type="submit" className="btnSendMsg" id="sendMsgBtn" onClick={sendMessage} >
                {/* disabled={!formValue} */}
               <i className="fa fa-paper-plane"></i>
               </button>
@@ -94,6 +96,6 @@ const ChatContent = () => {
         </div>
       </div>
     )
-};
+}
 
 export default ChatContent;

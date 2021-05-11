@@ -7,12 +7,13 @@ import Avatar from './../ChatLIst/Avatar';
 import moment from 'moment';
 
 
-function ChatMessage(props) {
+const ChatMessage = (props) => {
     const { text, uid, photoURL, createdAt} = props.message;
+    
    
      const date = createdAt && moment(createdAt.toDate()).format("Do MMM");
-     const time = createdAt && moment(createdAt.toDate()).format('LT'); 
-    //const time = createdAt && (createdAt.seconds * 1000).toLocaleDateString("en-US")
+     const time = createdAt && moment(createdAt.toDate()).format('LT');
+
     const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
   
     return (<>
@@ -28,12 +29,11 @@ function ChatMessage(props) {
       </div> */}
 
       <div
-        style={{ animationDelay: `0.8s` }}
+        // style={{ animationDelay: `0.8s` }}
         className={`chat__item ${messageClass}`}>
         <div className="chat__item__content">
           <div className="chat__msg">{text}</div>
           <div className="chat__meta">
-            {/* <span> {`${createdAt}`}</span> */}
             <span>{date}</span>
             <span>{time}</span>
           </div>

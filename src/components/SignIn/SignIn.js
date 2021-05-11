@@ -15,7 +15,7 @@ const SignIn = () => {
             <div className='signin_main'>
                 <div className='box'>
                 {/* <img src={logoc}/> */}
-                <h1> Welcom to Flexchat </h1>
+                <h1> Welcome to Flexchat </h1>
                 <p> Sign In to continue </p>
             <div>
             <button className="sign-in-btn" onClick={signInWithGoogle}>Sign in with Google</button>
