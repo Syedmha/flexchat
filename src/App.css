@@ -14,11 +14,12 @@ body {
 }
 .__main {
   max-width: 90%;
-  margin: auto;
+  /* margin: auto; */
   background-color: #fff;
   min-height: 80vh;
+  height: 100%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 10px; 
   padding: 20px;
   display: flex;
   padding-left: 0;
@@ -78,4 +79,20 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #3b5bfe;
+}
+
+/* Media queries */
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 425px) {
+/* Styles */
+.__main {
+  margin-top: 0px;
+  padding: 0px;
+  height: 600px;
+  margin-bottom: 0px;
+
+}
+
 }

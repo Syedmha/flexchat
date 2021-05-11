@@ -11,3 +11,18 @@
     max-width: 100%;
     cursor: pointer;
   }
+
+  /* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 425px) {
+/* Styles */
+.nav {
+  padding: 0 10px;
+  padding-top: 20px;
+}
+.nav img {
+  max-width: 50%;
+  display: block;
+}
+
+}
