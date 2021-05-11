@@ -3,8 +3,12 @@ import './UserProfile.css';
 import { auth } from './../../firebase/config';
 
 const UserProfile = () => {
-    const { uid, photoURL } = auth.currentUser;
+    const { uid, photoURL, email, Timestamp } = auth.currentUser;
     const displayName = auth.currentUser.displayName;
+
+   const toggleInfo = (e) => {
+      e.target.parentNode.classList.toggle("open");
+    };
 
     return(
         <div className="main__userprofile">
@@ -16,14 +20,12 @@ const UserProfile = () => {
           <p>CEO & Founder at Highly Inc</p>
         </div>
         <div className="profile__card">
-          <div className="card__header" > 
-          {/* onClick={this.toggleInfo} */}
+          <div className="card__header" onClick={toggleInfo} > 
             <h4>Information</h4>
             <i className="fa fa-angle-down"></i>
           </div>
           <div className="card__content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            ultrices urna a imperdiet egestas. Donec in magna quis ligula
+            <p> User Email: </p> <p>{email} </p>
           </div>
         </div>
         <div>

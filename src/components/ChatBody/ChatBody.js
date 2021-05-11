@@ -19,7 +19,7 @@ const ChatBody = () => {
 
     return(
         <div className="main__chatbody">
-          <ChatList />
+          {/* <ChatList /> */}
           <ChatContent />
           <UserProfile />
 
