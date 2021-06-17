@@ -31,10 +31,10 @@ const ChatList = () => {
 
     return(
       <div className="main__chatlist">
-        {/* <button className="btn">
+        <button className="btn">
           <i className="fa fa-plus"></i>
           <span>New conversation</span>
-        </button> */}
+        </button>
         <div className="chatlist__heading">
           <h2>Chats</h2>
           <button className="btn-nobg">

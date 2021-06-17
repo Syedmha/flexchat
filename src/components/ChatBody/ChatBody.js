@@ -3,6 +3,7 @@ import './ChatBody.css';
 import ChatList from '../ChatLIst/ChatList';
 import ChatContent from '../ChatContent/ChatContent';
 import UserProfile from '../UserProfile/UserProfile';
+// import Avatar from '../ChatLIst/Avatar';
 // import {
 //   Responsive,
 //   getWindowDimension,
