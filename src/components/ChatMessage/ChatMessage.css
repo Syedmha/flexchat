@@ -130,3 +130,7 @@
 .deletemsg.received {
   display: none;
 }
+
+.deletemsg {
+  color: #d1d1d1;
+}
