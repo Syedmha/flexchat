@@ -44,7 +44,7 @@ const ChatMessage = (props) => {
       </div> */}
 
       <div
-        // style={{ animationDelay: `0.8s` }}
+        style={{ animationDelay: `0.5s` }}
         className={`chat__item ${messageClass}`}>
         <div className="chat__item__content">
           <div className='textbox'>
