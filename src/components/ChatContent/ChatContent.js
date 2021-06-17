@@ -1,4 +1,4 @@
-import {React, useState, useRef} from 'react';
+import {React, useState, useRef, useEffect} from 'react';
 import './ChatContent.css';
 import { auth, firestore } from './../../firebase/config';
 import firebase from './../../firebase/config';
@@ -20,6 +20,9 @@ const ChatContent = () => {
   const displayName = auth.currentUser.displayName;
 
 
+  useEffect (() => {
+    dummy.current.scrollIntoView({ behavior: 'smooth' });
+  })
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -68,7 +71,7 @@ const ChatContent = () => {
           key={msg.id} 
           message={msg}
            />)}
-
+<br></br>
           <span ref={dummy}></span>
 
           </main>
