@@ -121,3 +121,12 @@
   .content__footer {
     padding-top: 30px;
   }
+
+.textbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deletemsg.received {
+  display: none;
+}

@@ -15,6 +15,7 @@ const ChatContent = () => {
 
   const [messages] = useCollectionData(query, { idField: 'id' });
 
+
   const [formValue, setFormValue] = useState('');
   const { uid, photoURL } = auth.currentUser;
   const displayName = auth.currentUser.displayName;
@@ -67,6 +68,7 @@ const ChatContent = () => {
           // animationDelay={index + 2}
           key={msg.id} 
           message={msg}
+          id={msg.id}
            />)}
 
           <span ref={dummy}></span>
